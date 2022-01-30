@@ -25,7 +25,7 @@ export default function SearchFilters() {
 	const [loading, setLoading] = useState(false)
 	const router = useRouter()
 
-	const searchProperties = (filterValues: { [x: string]: any; locationExternalIDs?: any; purpose?: any; rentFrequency?: any; categoryExternalID?: any; minPrice?: any; maxPrice?: any; areaMax?: any; roomsMin?: any; bathsMin?: any; sort?: any }) => {
+	const searchProperties = (filterValues) => {
 		const path = router.pathname
 		const {query} = router
 
@@ -107,7 +107,7 @@ export default function SearchFilters() {
 						{loading && <Spinner margin="auto" marginTop="3" />}
 						{showLocations && (
 							<Box height="300px" overflow="auto">
-								{locationData?.map((location: { id: Key | null | undefined; externalID: any; name: {} | null | undefined }) => (
+								{locationData?.map((location) => (
 									<Box
 										key={location.id}
 										onClick={() => {

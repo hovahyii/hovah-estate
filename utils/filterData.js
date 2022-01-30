@@ -134,7 +134,7 @@ export const filterData = [
 	},
 ]
 
-export const getFilterValues = (filterValues: { purpose: any; rentFrequency: any; categoryExternalID: any; minPrice: any; maxPrice: any; areaMax: any; roomsMin: any; bathsMin: any; sort: any; locationExternalIDs: any }) => {
+export const getFilterValues = (filterValues) => {
 	const {
 		purpose,
 		rentFrequency,
