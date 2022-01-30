@@ -35,7 +35,7 @@ const Search = ({properties}) => {
 				Properties {router.query.purpose}
 			</Text>
 			<Flex flexWrap="wrap">
-				{properties.map((property: { id?: any; coverPhoto?: any; price?: any; rentFrequency?: any; rooms?: any; title?: any; baths?: any; area?: any; agency?: any; isVerified?: any; externalID?: any }) => (
+				{properties.map((property) => (
 					<Property property={property} key={property.id} />
 				))}
 			</Flex>
